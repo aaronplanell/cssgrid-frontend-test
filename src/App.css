@@ -1,0 +1,130 @@
+.css-grid-example {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "header header header header"
+    "breadcrumb breadcrumb breadcrumb breadcrumb"
+    "aside-left main main aside-right"
+    "footer footer footer footer";
+  grid-template-rows: 4fr 1fr 12fr 3fr;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-gap: 3px;
+}
+
+header {
+  grid-area: header;
+  background-color: #3498db;
+}
+
+main {
+  grid-area: main;
+  background-color: #f1c40f;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #2ecc71;
+}
+
+.breadcrumb {
+  grid-area: breadcrumb;
+  background-color: #e67e22;
+}
+
+.aside-left {
+  grid-area: aside-left;
+  background-color: #9b59b6;
+}
+
+.aside-right {
+  grid-area: aside-right;
+  background-color: #e74c3c;
+}
+
+header:hover,
+header:active,
+footer:hover,
+footer:active,
+.breadcrumb:hover,
+.breadcrumb:active,
+.aside-left:hover,
+.aside-left:active,
+.aside-right:hover,
+.aside-right:active {
+    opacity: 0.8;
+    transition: opacity 0.5s;
+}
+
+.box {
+  display: inline-block;
+  background: tomato;
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+.box:hover,
+.box:active {
+    opacity: 0.8;
+    background: white;
+    color: red;
+    transition: color 1s, background 1s;
+}
+
+.css-grid-example-2ndLevel {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "id-box-a id-box-b id-box-c"
+    "id-box-d id-box-e id-box-f";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.id-box-a { grid-area: id-box-a; }
+.id-box-b { grid-area: id-box-b; }
+.id-box-c { grid-area: id-box-c; }
+.id-box-d { grid-area: id-box-d; }
+.id-box-e { grid-area: id-box-e; }
+.id-box-f { grid-area: id-box-f; }
+
+
+@media all and (max-width: 1024px) {
+
+    .css-grid-example {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      grid-template-areas:
+        "header header header"
+        "breadcrumb breadcrumb breadcrumb"
+        "aside-left main main";
+      grid-template-rows: 2fr 1fr 12fr;
+      grid-template-columns: 1fr 4fr 4fr;
+      grid-gap: 3px;
+    }
+
+    footer, .aside-right {
+      display: none;
+    }
+
+    .css-grid-example-2ndLevel {
+      grid-template-areas:
+        "id-box-f id-box-e"
+        "id-box-d id-box-c"
+        "id-box-b id-box-a";
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+
+}
