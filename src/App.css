@@ -7,7 +7,7 @@
     "breadcrumb breadcrumb breadcrumb breadcrumb"
     "aside-left main main aside-right"
     "footer footer footer footer";
-  grid-template-rows: 4fr 1fr 12fr 3fr;
+  grid-template-rows: 55px 1fr 12fr 3fr;
   grid-template-columns: 1fr 4fr 4fr 1fr;
   grid-gap: 3px;
 }

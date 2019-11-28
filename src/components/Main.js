@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import '../App.css';
 
+import Item from './Item';
+
 class Main extends Component {
+  componentDidMount() {
+    console.log('Main');
+  }
+
+  componentWillUnmount() {
+    console.log('Main');
+  }
+
   render() {
     return (
       <main className='css-grid-example-2ndLevel'>
-          <div className='box id-box-a'>A</div>
-          <div className='box id-box-b'>B</div>
-          <div className='box id-box-c'>C</div>
-          <div className='box id-box-d'>D</div>
-          <div className='box id-box-e'>E</div>
-          <div className='box id-box-f'>F</div>
+        <Item className='box id-box-a' id='A' />
+        <Item className='box id-box-b' id='B' />
+        <Item className='box id-box-c' id='C' />
+        <Item className='box id-box-d' id='D' />
+        <Item className='box id-box-e' id='E' />
+        <Item className='box id-box-f' id='F' />
       </main>
     );
   }
